@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Command Helper</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+                <span class="logo-title">Blender Helper</span>
+                <p class="logo-desc">Tu guía interactiva de atajos 3D</p>
+            </div>
+        </div>
+        
+        <div class="header-controls">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar comando...">
+            </div>
+            
+            <div class="theme-selector">
+                <select id="themeSelect">
+                    <option value="dark">Blender Dark (Default)</option>
+                    <option value="light">Light Mode</option>
+                    <option value="midnight">Midnight Blue</option>
+                    <option value="matrix">Matrix Code</option>
+                    <option value="pink">Pink Fox Mode 🦊</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside id="categorySidebar">
+            <div id="motivationBox" class="motivation-box">
+                <span class="motivation-icon">✨</span>
+                <p id="motivationText">Cargando motivación...</p>
+            </div>
+            <div class="divider"></div>
+            
+            <div id="categoryList">
+                <button class="category-btn active" data-category="All">Todos</button>
+                <!-- Categories will be injected here -->
+            </div>
+        </aside>
+
+        <div class="content">
+            <div id="commandGrid" class="grid-container">
+                <!-- Cards will be injected here -->
+            </div>
+            <div id="noResults" style="display:none; text-align:center; margin-top: 3rem; color: #b0b0b0;">
+                <h2>No se encontraron comandos</h2>
+                <p>Intenta con otros términos</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
